@@ -1,0 +1,28 @@
+
+import random
+
+lotto = []
+
+for time in range(5):
+    temp = []
+    
+    while len(temp) != 6:
+        num = random.randint(1, 45)
+
+        if num in temp:
+            continue
+        temp.append(num)
+
+    lotto.append(temp)
+
+for numbers in lotto:
+    print(sorted(numbers))
+
+'''
+22.09.25
+[9, 13, 15, 18, 26, 33]
+[2, 7, 19, 35, 39, 45]
+[11, 14, 26, 28, 29, 42]
+[6, 9, 22, 32, 33, 45]
+[3, 10, 13, 29, 42, 43]
+'''
